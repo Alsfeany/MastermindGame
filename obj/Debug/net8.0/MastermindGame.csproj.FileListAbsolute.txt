@@ -1,0 +1,14 @@
+C:\Users\Silver_Sa\OneDrive\سطح المكتب\Game\MastermindGame\MastermindGame\obj\Debug\net8.0\MastermindGame.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Silver_Sa\OneDrive\سطح المكتب\Game\MastermindGame\MastermindGame\obj\Debug\net8.0\MastermindGame.AssemblyInfoInputs.cache
+C:\Users\Silver_Sa\OneDrive\سطح المكتب\Game\MastermindGame\MastermindGame\obj\Debug\net8.0\MastermindGame.AssemblyInfo.cs
+C:\Users\Silver_Sa\OneDrive\سطح المكتب\Game\MastermindGame\MastermindGame\obj\Debug\net8.0\MastermindGame.csproj.CoreCompileInputs.cache
+C:\Users\Silver_Sa\OneDrive\سطح المكتب\Game\MastermindGame\MastermindGame\bin\Debug\net8.0\MastermindGame.exe
+C:\Users\Silver_Sa\OneDrive\سطح المكتب\Game\MastermindGame\MastermindGame\bin\Debug\net8.0\MastermindGame.deps.json
+C:\Users\Silver_Sa\OneDrive\سطح المكتب\Game\MastermindGame\MastermindGame\bin\Debug\net8.0\MastermindGame.runtimeconfig.json
+C:\Users\Silver_Sa\OneDrive\سطح المكتب\Game\MastermindGame\MastermindGame\bin\Debug\net8.0\MastermindGame.dll
+C:\Users\Silver_Sa\OneDrive\سطح المكتب\Game\MastermindGame\MastermindGame\bin\Debug\net8.0\MastermindGame.pdb
+C:\Users\Silver_Sa\OneDrive\سطح المكتب\Game\MastermindGame\MastermindGame\obj\Debug\net8.0\MastermindGame.dll
+C:\Users\Silver_Sa\OneDrive\سطح المكتب\Game\MastermindGame\MastermindGame\obj\Debug\net8.0\refint\MastermindGame.dll
+C:\Users\Silver_Sa\OneDrive\سطح المكتب\Game\MastermindGame\MastermindGame\obj\Debug\net8.0\MastermindGame.pdb
+C:\Users\Silver_Sa\OneDrive\سطح المكتب\Game\MastermindGame\MastermindGame\obj\Debug\net8.0\MastermindGame.genruntimeconfig.cache
+C:\Users\Silver_Sa\OneDrive\سطح المكتب\Game\MastermindGame\MastermindGame\obj\Debug\net8.0\ref\MastermindGame.dll
