@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 
 /// <summary>
-/// Entry point for the Mastermind console game.
-/// Accepts CLI args for custom code (-c) and max attempts (-t).
+/// The Entry point for the Mastermind console game.
+/// Accepted  args for custom code (-c) and max attempts (-t).
 /// </summary>
 class Program
 {
     static void Main(string[] args)
     {
         string secretCode = "";
-        int maxAttempts = 10; // default attempts
+        int maxAttempts = 10; // default attempts to solve the game.
 
-        // Parse CLI args
+        // Parse for the CLI args
         for (int i = 0; i < args.Length; i++)
         {
             if (args[i] == "-c" && i + 1 < args.Length)
@@ -29,19 +29,19 @@ class Program
             }
         }
 
-        // Validate user code or fallback to random gen
+        // Validating user code or gets fallback to random gen
         if (!IsValidCode(secretCode))
         {
-            secretCode = GenerateRandomCode(); // fallback
+            secretCode = GenerateRandomCode(); // fallback.
         }
 
-        // Start the game logic
+        // Start game logic.
         Game game = new Game(secretCode, maxAttempts);
         game.Start();
     }
 
     /// <summary>
-    /// Checks if a code is valid (4 unique digits from 0-8)
+    /// Checks if a code is valid (user should input 4unique digits from 0-8)
     /// </summary>
     static bool IsValidCode(string code)
     {
@@ -49,8 +49,8 @@ class Program
             return false;
 
         HashSet<char> digits = new HashSet<char>();
-        foreach (char c in code)
-        {
+        foreach (char c in code){
+            
             if (c < '0' || c > '8' || !digits.Add(c))
                 return false;
         }
@@ -58,12 +58,12 @@ class Program
     }
 
     /// <summary>
-    /// Generates a random valid secret code from digits 0–8
+    /// Generating a random valid secret code from digits 0–8
     /// </summary>
     static string GenerateRandomCode()
     {
         Random rand = new Random();
-        List<char> pool = new List<char>("012345678");
+        List<char> pool = new List<char>("012345678"); ///Character pool.
         string code = "";
 
         for (int i = 0; i < 4; i++)
@@ -72,13 +72,12 @@ class Program
             code += pool[index];
             pool.RemoveAt(index);
         }
-
         return code;
     }
 }
 
 /// <summary>
-/// Manages the gameplay loop, guess logic, validation, feedback, etc.
+/// Manages the gameplay core loop, guess logic, validation, and feedback.
 /// </summary>
 class Game
 {
@@ -86,26 +85,27 @@ class Game
     private readonly int maxAttempts;
 
     /// <summary>
-    /// Game constructor with a fixed code and number of attempts
+    /// Game constructor with a fixed code info and number of attempts
     /// </summary>
     public Game(string code, int attempts)
     {
+        
         secretCode = code;
         maxAttempts = attempts;
     }
 
     /// <summary>
-    /// Main game loop — handles rounds, inputs, and result feedback
+    /// main game loop — handles the rounds, inputs, and result feedback.
     /// </summary>
     public void Start()
     {
         Console.WriteLine("Can you break the code? Enter a valid guess.");
-
         int validAttempts = 0;
         HashSet<string> previousGuesses = new HashSet<string>();
 
         while (validAttempts < maxAttempts)
         {
+            
             Console.WriteLine($"Round {validAttempts}");
             Console.Write(">");
 
@@ -113,18 +113,21 @@ class Game
 
             if (guess == null)
             {
+                
                 Console.WriteLine("\n[EOF detected. Exiting...]");
                 return;
             }
 
             if (!IsValidGuess(guess))
             {
+                
                 Console.WriteLine("Wrong input! Try again w/ 4 unique digits.");
                 continue;
             }
 
             if (previousGuesses.Contains(guess))
             {
+                
                 Console.WriteLine("You already tried this! Pick something else.");
                 continue;
             }
@@ -134,6 +137,7 @@ class Game
 
             if (guess == secretCode)
             {
+                
                 Console.WriteLine("Congratz! You did it!");
                 return;
             }
@@ -152,7 +156,7 @@ class Game
     }
 
     /// <summary>
-    /// Checks if a guess is valid: 4 unique digits, 0–8
+    /// Checks if the guess is valid of the 4 unique digits.
     /// </summary>
     private bool IsValidGuess(string guess)
     {
@@ -168,7 +172,7 @@ class Game
     }
 
     /// <summary>
-    /// Compares guess vs. the secret code and returns (wellPlaced, misplaced)
+    /// Compares guess vs the secret code and returns (wellPlaced ,misplaced)
     /// </summary>
     private (int wellPlaced, int misplaced) CompareGuess(string guess, string code)
     {
@@ -187,7 +191,7 @@ class Game
                 misplaced++;
         }
 
-        misplaced -= wellPlaced; // Remove the already counted ones
+        misplaced -= wellPlaced; // Removes the already counted ones
         return (wellPlaced, misplaced);
     }
 }
