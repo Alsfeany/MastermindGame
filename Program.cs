@@ -1,4 +1,12 @@
-﻿using System;
+//-----------------------------------------------------------
+// 
+// (C) 2025 Mohammed Alsfeany 
+// LinkedIn: linkedin.com/in/mohammed-alsfeany
+// GitHub: github.com/SilverSSa
+// Website: http://alsfeany.flixers.store:3000/
+//-----------------------------------------------------------
+
+using System;
 using System.Collections.Generic;
 
 /// <summary>
@@ -63,7 +71,7 @@ class Program
     static string GenerateRandomCode()
     {
         Random rand = new Random();
-        List<char> pool = new List<char>("012345678"); ///Character pool.
+        List<char> pool = new List<char>("012345678"); //Character pool.
         string code = "";
 
         for (int i = 0; i < 4; i++)
